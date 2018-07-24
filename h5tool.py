@@ -287,9 +287,7 @@ def create_custom(h5_filename, image_dir):
     if img.shape[1] != resolution:
         print('Error: Input images must have the same width and height')
         return
-    if resolution != 2 ** int(np.floor(np.log2(resolution))):
-        print('Error: Input image resolution must be a power-of-two')
-        return
+    
     if channels not in [1, 3]:
         print('Error: Input images must be stored as RGB or grayscale')
     
